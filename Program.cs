@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -111,6 +112,56 @@ namespace Assignment4
             //(b)
             /// No,it's abbreviation of the code. =>If there's a hidden condition, it's preferable to use `if elseif
             ///  makes it more readable. If it's a simple condition, we can use the ternart operator. 
+            #endregion
+            #region Q5
+            int i = 0;
+            do 
+            {
+                i++;
+                Console.Write("Enter password: ");
+                string password = Console.ReadLine();
+                bool hasMinLength = password.Length >= 8;
+                bool hasUpper = false;
+                bool hasDigit = false;
+                bool hasSpace = false;
+                foreach (char c in password)
+                {
+                    if (char.IsUpper(c))
+                        hasUpper = true;
+
+                    if (char.IsDigit(c))
+                        hasDigit = true;
+
+                    if (c == ' ')
+                        hasSpace = true;
+                }
+                if (hasMinLength && hasUpper && hasDigit && !hasSpace)
+                {
+                    Console.WriteLine("Password accepted!");
+                }
+                else
+                {
+                  
+                    Console.WriteLine("Invalid password! Violations:");
+                    if (!hasMinLength)
+                        Console.WriteLine("password must be at least 8 characters");
+                    if (!hasUpper)
+                        Console.WriteLine("password must contain at least one uppercase letter");
+
+                    if (!hasDigit)
+                        Console.WriteLine("password must contain at least one digit");
+
+                    if (hasSpace)
+                        Console.WriteLine("password must not contain spaces");
+                }
+
+
+            } while (i<5);
+           if(i==5)
+                Console.WriteLine("Account Locked");
+
+            
+
             #endregion
         }
     }
