@@ -62,6 +62,47 @@ namespace Assignment4
 
             //Console.WriteLine($"Final price Equal {price}");
             #endregion
+            #region Q3
+            //string fileExtention = ".pdf";
+            //string fileType;
+            //switch (fileExtention)
+            //{
+            //    case ".pdf":
+            //        fileType = "pdf Document";
+            //        break;
+            //    case ".doc":
+            //    case ".docx":
+            //        fileType = "word Document";
+            //        break;
+            //    case ".xisx":
+            //    case ".xis":
+            //        fileType = "Excel spardSheet";
+            //        break;
+            //    case ".jpg":
+            //    case ".png":
+            //    case ".gif":
+            //        fileType = "Iamge file";
+            //        break;
+
+            //    default:
+            //        fileType = "Unknown file";
+            //        break;
+            //}
+            //Console.WriteLine(fileType);
+            /////////////////////////////////////////
+            //string fileExtention = ".pdf";
+            //string fileType = fileExtention switch
+            //{ 
+            //     ".pdf"=> "pdf Document",
+            //    ".doc" or ".docx"=> "word Document",
+            //    ".xisx" or ".xis" => "Excel spardSheet",
+            //    ".jpg" or ".png" or ".gif" => "Iamge file",
+            //    _=> "Unknown file"
+            //};
+            //Console.WriteLine(fileType);
+
+
+            #endregion
 
         }
     }
