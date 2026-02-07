@@ -103,7 +103,15 @@ namespace Assignment4
 
 
             #endregion
-
+            #region Q4
+            //int temperature = 35;
+            //String waterAdvice = temperature < 0 ? "Frezzing! stay indoors" : temperature < 15 ? "Cold Wear a jacket" :
+            //    temperature < 25 ? "pleasant weather" : temperature < 35 ? "Warm stay hydrated" : "Hot! avoid sun exposure";
+            //Console.WriteLine(waterAdvice);
+            //(b)
+            /// No,it's abbreviation of the code. =>If there's a hidden condition, it's preferable to use `if elseif
+            ///  makes it more readable. If it's a simple condition, we can use the ternart operator. 
+            #endregion
         }
     }
 }
