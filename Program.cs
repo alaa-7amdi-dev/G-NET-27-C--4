@@ -114,55 +114,108 @@ namespace Assignment4
             ///  makes it more readable. If it's a simple condition, we can use the ternart operator. 
             #endregion
             #region Q5
-            int i = 0;
-            do 
-            {
-                i++;
-                Console.Write("Enter password: ");
-                string password = Console.ReadLine();
-                bool hasMinLength = password.Length >= 8;
-                bool hasUpper = false;
-                bool hasDigit = false;
-                bool hasSpace = false;
-                foreach (char c in password)
-                {
-                    if (char.IsUpper(c))
-                        hasUpper = true;
+            // int i = 0;
+            // do 
+            // {
+            //     i++;
+            //     Console.Write("Enter password: ");
+            //     string password = Console.ReadLine();
+            //     bool hasMinLength = password.Length >= 8;
+            //     bool hasUpper = false;
+            //     bool hasDigit = false;
+            //     bool hasSpace = false;
+            //     foreach (char c in password)
+            //     {
+            //         if (char.IsUpper(c))
+            //             hasUpper = true;
 
-                    if (char.IsDigit(c))
-                        hasDigit = true;
+            //         if (char.IsDigit(c))
+            //             hasDigit = true;
 
-                    if (c == ' ')
-                        hasSpace = true;
-                }
-                if (hasMinLength && hasUpper && hasDigit && !hasSpace)
-                {
-                    Console.WriteLine("Password accepted!");
-                }
-                else
-                {
-                  
-                    Console.WriteLine("Invalid password! Violations:");
-                    if (!hasMinLength)
-                        Console.WriteLine("password must be at least 8 characters");
-                    if (!hasUpper)
-                        Console.WriteLine("password must contain at least one uppercase letter");
+            //         if (c == ' ')
+            //             hasSpace = true;
+            //     }
+            //     if (hasMinLength && hasUpper && hasDigit && !hasSpace)
+            //     {
+            //         Console.WriteLine("Password accepted!");
+            //     }
+            //     else
+            //     {
 
-                    if (!hasDigit)
-                        Console.WriteLine("password must contain at least one digit");
+            //         Console.WriteLine("Invalid password! Violations:");
+            //         if (!hasMinLength)
+            //             Console.WriteLine("password must be at least 8 characters");
+            //         if (!hasUpper)
+            //             Console.WriteLine("password must contain at least one uppercase letter");
 
-                    if (hasSpace)
-                        Console.WriteLine("password must not contain spaces");
-                }
+            //         if (!hasDigit)
+            //             Console.WriteLine("password must contain at least one digit");
+
+            //         if (hasSpace)
+            //             Console.WriteLine("password must not contain spaces");
+            //     }
 
 
-            } while (i<5);
-           if(i==5)
-                Console.WriteLine("Account Locked");
+            // } while (i<5);
+            //if(i==5)
+            //     Console.WriteLine("Account Locked");
 
-            
+
 
             #endregion
+            #region Q6
+            int[] scores = { 85, 42, 91, 67, 55, 79, 39, 88, 72, 95, 60, 48 };
+            //foreach (int item in scores)
+            //{
+            //    if (item < 50)
+            //        Console.WriteLine($"failing scores {item}");
+            //    else
+            //        continue;
+
+            //}
+            /////////////
+            //foreach (int item in scores)
+            //{
+            //    if (item > 90) 
+            //    { 
+            //        Console.WriteLine(item);
+            //        break;
+            //    }
+
+            //}
+            //////////
+            //double avg = 0;
+            //for (int i = 0; i < scores.Length; i++)
+            //{
+            //    if (scores[i] > 40)
+            //        avg = scores[i] / 2;
+            //    else
+            //        continue;
+            //}
+            //Console.WriteLine(avg);
+            //////////////
+            ///
+            //int countA = 0, countB = 0, countC = 0, countD = 0, countF = 0;
+            //foreach (int item in scores)
+            //{
+            //    if (90 < item && item < 100)
+            //        countA++;
+            //    else if (80 < item && item < 89)
+            //        countB++;
+            //    else if (70 < item && item < 79)
+            //        countC++;
+            //    else if (60 < item && item < 69)
+            //        countD++;
+            //    else if (item < 60)
+            //        countF++;
+
+            //}
+            //Console.WriteLine($"Students in class A {countA}");          
+            //Console.WriteLine($"Students in class B {countB}");          
+            //Console.WriteLine($"Students in class C {countC}");          
+            //Console.WriteLine($"Students in class D {countD}");          
+            //Console.WriteLine($"Students in class F {countF}");          
+            //    #endregion
         }
     }
 }
